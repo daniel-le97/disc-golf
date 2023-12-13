@@ -7,14 +7,18 @@
 
 
 
-<div class="absolute -bottom-8 w-[95%]   py-2 flex items-center justify-center bg-white rounded shadow-xl">
+<div class="absolute -bottom-8 w-full  py-2 flex items-center justify-center bg-white shadow-xl">
  <div v-for="bannerItem in bannerItems" class=" p-2  flex space-x-0.5 bg-gray-200 mx-2 rounded shadow-md" >
 <span>
-  {{bannerItem.number}} 
+  {{bannerItem.number}}  
 </span>
+  <span class="mx-3">
+     ·  
+  </span>
 <span>
   {{bannerItem.name}}
 </span>
+ 
  </div>
 
 </div>
