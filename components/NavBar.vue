@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full h-16 shadow-xl flex items-center justify-center">
+  <div class="w-full h-16 shadow-md flex items-center justify-center">
     
     <div class="flex w-full space-x-4 items-center justify-between">
-<div class=" font-bold text-xl px-5">
+<div class=" font-bold text-xl px-5 ">
   Disk Golf Scene
 </div>
 
@@ -21,13 +21,13 @@
 const items = ref([
   { name: 'Home', href: '/' },
   { name: 'Tournaments', href: '/tournaments' },
-  { name: 'Leagues', href: '/leagues' },
-  { name: 'Clubs', href: '/clubs' },
-  { name: 'Courses', href: '/courses' },
-  { name: 'Series', href: '/series' },
-  { name: 'Videos', href: '/videos' },
-  { name: 'Trading Post', href: '/trading-post' },
-  { name: 'Contact', href: '/contact' },
+  // { name: 'Leagues', href: '/leagues' },
+  // { name: 'Clubs', href: '/clubs' },
+  // { name: 'Courses', href: '/courses' },
+  // { name: 'Series', href: '/series' },
+  // { name: 'Videos', href: '/videos' },
+  // { name: 'Trading Post', href: '/trading-post' },
+  // { name: 'Contact', href: '/contact' },
 ])
 </script>
 
