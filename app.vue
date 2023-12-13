@@ -1,8 +1,10 @@
 <template>
+ <div class="z-50">
+   <NuxtLoadingIndicator :height="4"  />
+ </div>
   <NavBar />
   <BreadCrumbBar/>
   <div>
-    
     <NuxtPage />
   </div>
     <Footer />
