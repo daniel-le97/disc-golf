@@ -1,12 +1,11 @@
 <template>
   <div>
-    <NavBar/>
-   
+    <NavBar />
 
-   <NuxtPage/>
+    <NuxtPage />
+    <Footer />
   </div>
 </template>
-
 
 <style>
 .page-enter-active,
@@ -18,5 +17,4 @@
   opacity: 0;
   filter: blur(0.25rem);
 }
-
 </style>
