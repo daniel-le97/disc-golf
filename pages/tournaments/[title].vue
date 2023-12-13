@@ -10,14 +10,19 @@ const tournament = tournaments.value.find(t => t.title == route.params.title)
 
 <template>
   <main v-if="tournament" class="min-h-screen px-20">
-    <div class="flex p-10 space-x-2">
-      <div class="w-1/6 space-y-5">
+    <div class="flex p-10 space-x-5">
+      <div class="w-1/6 space-y-5  sticky h-full top-12">
         <div class=" border-black/30 border-2 text-2xl  py-2 bg-orange-500 text-white font-bold drop-shadow  shadow-inset flex justify-center rounded">
           Tournament
         </div>
-        <div class="">
+        <div class=" text-center text-xl">
           HOSTED BY: <br>
-          {{ tournament.host }}
+          
+         <p class="text-green-600 underline"> {{ tournament.host }}</p>
+        </div>
+
+        <div class=" flex items-center justify-center">
+          <img src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="" class="rounded-full object-fit w-44 shadow-md">
         </div>
       </div>
       <div class=" w-5/6">
@@ -29,29 +34,29 @@ const tournament = tournaments.value.find(t => t.title == route.params.title)
         </div>
 
         <!-- TABS -->
-        <div class="flex space-x-1">
-          <button class="px-2 p-1 bg-emerald-700 text-white">
+        <div class="flex space-x-1 border-b-4 border-b-emerald-700 ">
+          <button class="px-4 p-1 bg-emerald-700 text-white  rounded-t">
             About
           </button>
-          <button class="px-2 p-1 bg-gray-300 text-emerald-600">
+          <button class="px-4 p-1 bg-gray-300 text-emerald-600 rounded-t">
             Register
           </button>
-          <button class="px-2 p-1 bg-gray-300 text-emerald-600">
+          <button class="px-4 p-1 bg-gray-300 text-emerald-600 rounded-t">
             Registered Players
           </button>
-          <button class="px-2 p-1 bg-gray-300 text-gray-700">
+          <button class="px-4 p-1 bg-gray-300 text-gray-700 rounded-t">
             Pictures
           </button>
-          <button class="px-2 p-1 bg-gray-300 text-gray-700">
+          <button class="px-4 p-1 bg-gray-300 text-gray-700 rounded-t">
             Videos
           </button>
-          <button class="px-2 p-1 bg-gray-300 text-emerald-600">
+          <button class="px-4 p-1 bg-gray-300 text-emerald-600 rounded-t">
             Comments
           </button>
         </div>
         <!-- !TABS -->
 
-        <hr class="mt-1 h-3 w-full bg-emerald-700">
+        
 
         <div class=" flex p-5 pl-0 bg-lime-300/20 border border-emerald-900/20">
           <!-- LEFT COLUMN -->
@@ -65,16 +70,16 @@ const tournament = tournaments.value.find(t => t.title == route.params.title)
             <!-- LOCATION -->
             <div class=" mt-2">
               <h3 class="font-bold">
-                Location
+                Locations
               </h3>
               <div class="">
-                <div class="flex">
+                <div class="flex ">
                   <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover w-16 rounded border border-emerald-900 shadow-md">
                   <div class=" text-sm p-1">
                     <p class="text-lg text-emerald-500">
                       {{ tournament.location }}
                     </p>
-                    <div class="flex items-center space-x-1">
+                    <div class="flex  space-x-3">
                       <p>{{ tournament.location }}</p>
                       <p class="text-xs text-orange-400">
                         Get Directions

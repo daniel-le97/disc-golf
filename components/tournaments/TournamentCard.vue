@@ -25,9 +25,9 @@ defineProps({
     <div class="w-5/6 ">
       <div class="flex space-x-3">
         <a class="text-emerald-500 text-lg underline">{{ title }}</a>
-        <button v-if="registrationOpen" class="rounded-full  px-2  bg-orange-400 text-white text-xs flex items-center justify-center shadow-sm hover:bg-orange-300 hover:shadow-xl transition-all duration-150  ">
+        <p v-if="registrationOpen" class="rounded-full  px-2  bg-orange-400 text-white text-xs flex items-center justify-center shadow-sm hover:bg-orange-300 hover:shadow-xl transition-all duration-150  ">
           Registration Open
-        </button>
+        </p>
       </div>
       <p class="text-sm">
         at {{ location }}
@@ -36,12 +36,15 @@ defineProps({
         Hosted by {{ host }}
       </p>
     </div>
-    <div class="w-1/6 flex items-center justify-center space-x-1">
-      <p>Registrants:</p>
-      <p class="text-emerald-500 text-lg">
-        {{ registrants }}
-      </p>
-    </div>
+  <div >
+      <p class="text-xl font-semibold">C-Tier</p>
+      <div class="w-1/6 flex items-center justify-center space-x-1">
+        <p class="text-xs">Registrants:</p>
+        <p class="text-emerald-500 text-lg">
+          {{ registrants }}
+        </p>
+      </div>
+  </div>
   </NuxtLink>
 </template>
 

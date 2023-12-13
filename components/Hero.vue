@@ -30,7 +30,7 @@ const bannerItems = [
 
 <template>
   <section
-    class="relative flex items-center  mb-24 bg-black "
+    class="relative flex items-center   mb-8 bg-black min-h-[84vh] "
   >
     <div class=" w-1/2 flex items-center justify-center">
       <div class="">
@@ -40,7 +40,7 @@ const bannerItems = [
         <form class="w-full ">
           <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-              <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+              <label class="block text-emerald-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
                 Name
               </label>
             </div>
@@ -50,7 +50,7 @@ const bannerItems = [
           </div>
           <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-              <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+              <label class="block text-emerald-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
                 Email
               </label>
             </div>
@@ -60,7 +60,7 @@ const bannerItems = [
           </div>
           <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-              <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
+              <label class="block text-emerald-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">
                 Password
               </label>
             </div>
@@ -91,15 +91,15 @@ const bannerItems = [
       <img src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="" class="object-fit  w-4/5 ">
     </div>
 
-    <div class="absolute -bottom-8 w-full  py-2 flex items-center justify-center bg-white shadow-xl">
+    <div class="absolute -bottom-8 w-full  py-4 flex items-center justify-center bg-white shadow-xl bg-zinc-800">
       <div v-for="bannerItem in bannerItems" class=" p-2  flex space-x-0.5 bg-gray-200 mx-2 rounded shadow-md">
-        <span>
+        <span class="text-green-600">
           {{ bannerItem.number }}
         </span>
         <span class="mx-3">
           ·
         </span>
-        <span>
+        <span >
           {{ bannerItem.name }}
         </span>
       </div>

@@ -1,10 +1,11 @@
 <template>
+  <NavBar />
+  <BreadCrumbBar/>
   <div>
-    <NavBar />
-
+    
     <NuxtPage />
-    <Footer />
   </div>
+    <Footer />
 </template>
 
 <style>
