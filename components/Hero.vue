@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const bannerItems = [
+const bannerItems = ref([
   {
     name: 'members',
     number: 219806,
@@ -25,7 +25,7 @@ const bannerItems = [
     number: 12034,
   },
 
-]
+])
 </script>
 
 <template>
@@ -92,14 +92,14 @@ const bannerItems = [
     </div>
 
     <div class="absolute -bottom-8 w-full  py-4 flex items-center justify-center bg-white shadow-xl bg-zinc-800">
-      <div v-for="bannerItem in bannerItems" class=" p-2  flex space-x-0.5 bg-gray-200 mx-2 rounded shadow-md">
+      <div v-for="bannerItem in bannerItems" :key="bannerItem.name" class=" p-2  flex space-x-0.5 bg-gray-200 mx-2 rounded shadow-md">
         <span class="text-green-600">
           {{ bannerItem.number }}
         </span>
         <span class="mx-3">
           ·
         </span>
-        <span >
+        <span>
           {{ bannerItem.name }}
         </span>
       </div>

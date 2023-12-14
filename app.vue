@@ -1,13 +1,13 @@
 <template>
- <div class="z-50">
-   <NuxtLoadingIndicator :height="4"  />
- </div>
+  <div class="z-50">
+    <NuxtLoadingIndicator :height="4" />
+  </div>
   <NavBar />
-  <BreadCrumbBar/>
+  <BreadCrumbBar />
   <div>
     <NuxtPage />
   </div>
-    <Footer />
+  <Footer />
 </template>
 
 <style>

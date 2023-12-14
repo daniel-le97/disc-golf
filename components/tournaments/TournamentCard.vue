@@ -36,15 +36,19 @@ defineProps({
         Hosted by {{ host }}
       </p>
     </div>
-  <div >
-      <p class="text-xl font-semibold">C-Tier</p>
+    <div>
+      <p class="text-xl font-semibold">
+        C-Tier
+      </p>
       <div class="w-1/6 flex items-center justify-center space-x-1">
-        <p class="text-xs">Registrants:</p>
+        <p class="text-xs">
+          Registrants:
+        </p>
         <p class="text-emerald-500 text-lg">
           {{ registrants }}
         </p>
       </div>
-  </div>
+    </div>
   </NuxtLink>
 </template>
 

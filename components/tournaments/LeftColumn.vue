@@ -63,19 +63,19 @@ const unitedStatesLocations = [
     </div>
     <div class="">
       <h3>Canada</h3>
-      <p v-for="c in canadaProvinces">
+      <p v-for="c in canadaProvinces" :key="c">
         {{ c }}
       </p>
     </div>
     <div class=" my-5">
       <h3>International</h3>
-      <p v-for="i in internationalCountries">
+      <p v-for="i in internationalCountries" :key="i">
         {{ i }}
       </p>
     </div>
     <div class="">
       <h3>United States</h3>
-      <p v-for="u in unitedStatesLocations">
+      <p v-for="u in unitedStatesLocations" :key="u">
         {{ u }}
       </p>
     </div>

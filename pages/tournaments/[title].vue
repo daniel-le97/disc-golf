@@ -17,8 +17,10 @@ const tournament = tournaments.value.find(t => t.title == route.params.title)
         </div>
         <div class=" text-center text-xl">
           HOSTED BY: <br>
-          
-         <p class="text-green-600 underline"> {{ tournament.host }}</p>
+
+          <p class="text-green-600 underline">
+            {{ tournament.host }}
+          </p>
         </div>
 
         <div class=" flex items-center justify-center">
@@ -55,8 +57,6 @@ const tournament = tournaments.value.find(t => t.title == route.params.title)
           </button>
         </div>
         <!-- !TABS -->
-
-        
 
         <div class=" flex p-5 pl-0 bg-lime-300/20 border border-emerald-900/20">
           <!-- LEFT COLUMN -->
