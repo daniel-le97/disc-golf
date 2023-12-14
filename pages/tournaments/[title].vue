@@ -5,7 +5,7 @@ import Tournaments from '../../data/Tournaments.json'
 const tournaments = ref(Tournaments)
 const route = useRoute()
 
-const tournament = tournaments.value.find(t => t.title == route.params.title)
+const tournament = tournaments.value.find(t => t.title === route.params.title)
 </script>
 
 <template>

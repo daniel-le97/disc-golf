@@ -10,7 +10,7 @@ export async function authLogin(email: string, password: string) {
   })
   useAuth().redirectTo.value = null
   await useAuth().updateSession()
-  await navigateTo(useAuth().redirectTo.value || '/')
+  await navigateTo(useAuth().redirectTo.value || '/tournaments')
 }
 
 export async function authRegister(email: string, password: string) {

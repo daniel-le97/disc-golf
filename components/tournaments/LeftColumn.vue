@@ -82,7 +82,7 @@ const unitedStatesLocations = [
   </div>
 </template>
 
-<style scoped>
+<style  scoped>
 h3{
   @apply font-bold
 }
