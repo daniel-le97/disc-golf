@@ -50,7 +50,7 @@ const updateIndicatorPosition = () => {
 </script>
 
 <template>
-  <div class="w-full h-16 shadow-md flex items-center justify-center bg-zinc-800 text-white py-0 px-5 fixed top-0 z-50">
+  <div class="w-full h-16 flex items-center justify-center shadow-md bg-zinc-800 text-white py-0 px-5 fixed top-0 z-50">
     <div class="flex w-full h-full space-x-4 justify-between">
       <div class="px-5 flex space-x-4 items-center justify-center">
         <img
@@ -61,7 +61,7 @@ const updateIndicatorPosition = () => {
           Disk Golf Scene
         </span>
       </div>
-      <div class="flex space-x-4  items-end relative ">
+      <div class="flex space-x-4  items-center relative ">
         <NuxtLink
           v-for="item in items" :key="item.name" :to="item.href" class="text-lg" active-class="active"
           @click="updateIndicatorPosition"
@@ -106,7 +106,7 @@ const updateIndicatorPosition = () => {
 }
 
 .active {
-  @apply bg-gradient-to-b from-emerald-500 to-zinc-700  rounded-t-sm px-2 transition-all duration-300;
+  @apply text-emerald-500 transition-all duration-300;
 }
 
 .indicator {

@@ -66,7 +66,7 @@ import SignUpModal from './SignUpModal.vue';
                 target="_blank"
                 class=" "
               >
-              <Icon name="logos:facebook" class="text-3xl hover:-translate-y-1 transition-transform duration-150" />
+              <Icon name="logos:facebook" class="text-3xl hover:-translate-y-1.5 transition-transform duration-150" />
               </a>
             </li>
 
@@ -77,7 +77,18 @@ import SignUpModal from './SignUpModal.vue';
                 target="_blank"
                 class=""
               >
-             <Icon name="skill-icons:instagram" class="text-3xl hover:-translate-y-1 transition-transform duration-150" />
+             <Icon name="skill-icons:instagram" class="text-3xl hover:-translate-y-1.5 transition-transform duration-150" />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/"
+                rel="noreferrer"
+                target="_blank"
+                class=" "
+              >
+              <Icon name="line-md:twitter-x" class="text-3xl hover:-translate-y-1.5 transition-transform duration-150 text-black" />
               </a>
             </li>
 
@@ -88,18 +99,7 @@ import SignUpModal from './SignUpModal.vue';
                 target="_blank"
                 class=""
               >
-              <Icon name="line-md:twitter-x" class="text-3xl hover:-translate-y-1 transition-transform duration-150" />
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/"
-                rel="noreferrer"
-                target="_blank"
-                class=""
-              >
-                   <Icon name="logos:youtube-icon" class="text-3xl hover:-translate-y-1 transition-transform duration-150" />
+                   <Icon name="logos:youtube-icon" class="text-3xl hover:-translate-y-1.5 transition-transform duration-150" />
               </a>
             </li>
 
@@ -109,73 +109,73 @@ import SignUpModal from './SignUpModal.vue';
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">
+            <p class="text-lg font-extrabold text-gray-900">
               About Us
             </p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                <a class="" href="/">
                   Company History
                 </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                <a class="" href="/">
                   Meet the Team
                 </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                <a class="" href="/">
                   Employee Handbook
                 </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Careers </a>
+                <a class="" href="/"> Careers </a>
               </li>
             </ul>
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">
+            <p class="text-lg font-extrabold text-gray-900">
               Our Services
             </p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
+                <a class="" href="/">
                   Web Development
                 </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Web Design </a>
+                <a class="" href="/"> Web Design </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Marketing </a>
+                <a class="" href="/"> Marketing </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Google Ads </a>
+                <a class="" href="/"> Google Ads </a>
               </li>
             </ul>
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">
+            <p class="text-lg font-extrabold text-gray-900">
               Helpful Links
             </p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> FAQs </a>
+                <a class="" href="/"> FAQs </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="/"> Support </a>
+                <a class="" href="/"> Support </a>
               </li>
 
             
@@ -183,7 +183,7 @@ import SignUpModal from './SignUpModal.vue';
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">
+            <p class="text-lg font-extrabold text-gray-900">
               Contact Us
             </p>
 
@@ -315,7 +315,10 @@ a:before{
 }
 
 a:hover:before{
-  width: 100%;
+  @apply w-full 
  
+}
+a:hover{
+  @apply text-emerald-500  transition-colors duration-300;
 }
 </style>

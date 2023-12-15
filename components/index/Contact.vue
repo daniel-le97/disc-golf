@@ -92,10 +92,10 @@
 </div>
 
     </div>
-<div class="lg:w-1/2 z-10 relative">
+<div class="lg:w-1/2 z-10 relative group">
     <div class="space-y-5 p-10 shadow-md rounded backdrop-blur-md border-2 border-gray-100/20">
       <div class="flex items-center justify-between gap-1.5 text-emerald-950">
-        <h3 class="text-5xl font-extrabold">Get In Touch</h3>
+        <h3 class="text-4xl font-extrabold">Get In Touch</h3>
         <Icon name="material-symbols:connect-without-contact-outline-rounded" class="text-8xl drop-shadow-md" />
       </div>
     <p>Have any questions or concerns regarding events, tournaments or feedback for the website fill out the form and get in contact with someone! </p>
@@ -118,7 +118,7 @@
 </UFormGroup>
 <UTextarea required size="xl" placeholder="body..." />
     </div>
-      <div class="absolute inset-0 w-full h-full rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-900 rotate-[2deg] lg:rotate-[12deg] border-4 border-emerald-300/20 -z-10"></div>
+      <div class="absolute inset-0 w-full h-full rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-900 rotate-[2deg] lg:rotate-[12deg] border-4 border-emerald-300/20 -z-10 group-hover:lg:rotate-[0deg] transition-all duration-500"></div>
   </div>
 
 </div>
