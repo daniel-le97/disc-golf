@@ -57,7 +57,7 @@ const updateIndicatorPosition = () => {
           src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="logo"
           class="rounded-full shadow-md w-12 h-12"
         >
-        <span class="font-bold text-xl">
+        <span class="font-extrabold text-2xl">
           Disk Golf Scene
         </span>
       </div>

@@ -10,8 +10,8 @@ import SignUpModal from './SignUpModal.vue';
 
 
 
- 
-    <div class="bg-zinc-800 relative pt-16 ">
+ <!-- CALL TO ACTION -->
+    <div class="bg-zinc-800 relative pt-32 lg:pt-16 ">
         <div class="absolute top-0 lg:flex lg:items-center lg:justify-between w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8   ">
             <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
                 <span class="block">
@@ -21,7 +21,7 @@ import SignUpModal from './SignUpModal.vue';
                     Sign up to help contribute!
                 </span>
             </h2>
-            <div class="lg:mt-0 lg:flex-shrink-0">
+            <div class="mt-5 lg:mt-0 lg:flex-shrink-0">
                 <div class=" inline-flex rounded-md shadow">
                   <SignUpModal/>
                 </div>
@@ -31,7 +31,7 @@ import SignUpModal from './SignUpModal.vue';
           
         </div>
     </div>
-
+<!-- ~ CALL TO ACTION -->
 
 
 
@@ -64,7 +64,7 @@ import SignUpModal from './SignUpModal.vue';
                 href="/"
                 rel="noreferrer"
                 target="_blank"
-                class=""
+                class=" "
               >
               <Icon name="logos:facebook" class="text-3xl hover:-translate-y-1 transition-transform duration-150" />
               </a>
@@ -302,5 +302,20 @@ import SignUpModal from './SignUpModal.vue';
 <style scoped>
 .clip-triangle{
   clip-path: polygon(100% 40%, 0 100%, 100% 100%);
+}
+
+a{
+  position: relative;
+}
+
+a:before{
+  @apply bg-emerald-800 absolute w-0 h-[2px] -bottom-[6px] transition-all duration-500 ease-in-out; 
+  content: "";
+ 
+}
+
+a:hover:before{
+  width: 100%;
+ 
 }
 </style>

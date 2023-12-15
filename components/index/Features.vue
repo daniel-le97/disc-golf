@@ -7,7 +7,7 @@
   <div class="lg:flex items-center justify-between p-5 space-y-5 lg:space-y-0">
       <div  class=" p-2 rounded text-zinc-800 lg:w-1/3 " >
         <div class=" flex flex-col items-center justify-center space-y-4">
-          <Icon name="fluent:people-community-16-filled" class="text-6xl  rounded-full shadow-md" />
+          <Icon name="fluent:people-community-16-filled" class="text-6xl  drop-shadow-lg" />
           <h3 class="font-extrabold text-2xl">
             Social Conversations
           </h3>
@@ -16,7 +16,7 @@
       </div>
         <div  class=" p-2 rounded text-zinc-800  lg:w-1/3  " >
           <div class=" flex flex-col items-center justify-center space-y-4">
-            <Icon name="ion:disc" class="text-6xl rounded-full shadow-md" />
+            <Icon name="ion:disc" class="text-6xl  drop-shadow-lg" />
             <h3 class="font-extrabold text-2xl ">
               Social Conversations
             </h3>
@@ -25,7 +25,7 @@
         </div>
           <div  class=" p-2 rounded text-zinc-800  lg:w-1/3 " >
           <div class=" flex flex-col items-center justify-center space-y-4">
-            <Icon name="streamline:decent-work-and-economic-growth-solid" class="text-6xl rounded shadow-md" />
+            <Icon name="streamline:decent-work-and-economic-growth-solid" class="text-6xl  drop-shadow-lg" />
             <h3 class="font-extrabold text-2xl">
               Social Conversations
             </h3>

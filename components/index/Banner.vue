@@ -12,7 +12,7 @@
 
           <span class="relative inline-block px-2 mt-2">
             <div class="absolute inset-0 transform -skew-x-12 bg-teal-accent-400" />
-            <span class="relative text-teal-800">Sign Up</span>
+            <span class="relative text-emerald-800">Sign Up</span>
           </span>
           and Contribute!
         </h2>

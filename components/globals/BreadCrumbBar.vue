@@ -21,11 +21,12 @@ watchEffect(() => updateBreadcrumb())
 </script>
 
 <template>
-  <nav class=" w-full px-20  flex items-center py-1 bg-zinc-700 text-white shadow-md">
+  <nav class=" w-full px-20  flex items-center py-1 bg-zinc-700 text-white shadow-md ">
     <NuxtLink to="/" class="text-sm">
-      home
+   <Icon name="uil:home" class="text-xl text-emerald-500" />
+      <!-- <span>Home</span> -->
     </NuxtLink>
-    <span class="separator"> > </span>
+  <Icon name="material-symbols:chevron-right-rounded" class="text-2xl mx-1" />
     <span v-for="(item, index) in items" :key="index" class="text-sm">
       <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
       <span v-if="index < items.length - 1" class="separator"> > </span>

@@ -4,6 +4,7 @@ import RecentScores from '~/components/index/RecentScores.vue'
 import Banner from '~/components/index/Banner.vue'
 import Features from '~/components/index/Features.vue';
 import Hero from '~/components/index/Hero.vue';
+import Contact from '~/components/index/Contact.vue'
 </script>
 
 <template>
@@ -20,7 +21,8 @@ import Hero from '~/components/index/Hero.vue';
 
 
 
-        <div class=" flex flex-col items-center my-3 ">
+      <div class="mt-16">
+           <div class=" flex flex-col items-center my-3 ">
       <hr class="h-2 bg-emerald-600 w-1/6 mb-3">
       <h2 class="font-extrabold text-5xl  ">Recent Events</h2>
     </div>
@@ -33,6 +35,10 @@ import Hero from '~/components/index/Hero.vue';
         <RecentAces />
       </div>
     </div>
+      </div>
+
+
+      <Contact/>
   </main>
 </template>
 
