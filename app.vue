@@ -1,10 +1,17 @@
+
+<script setup lang="ts">
+import BreadCrumbBar from './components/globals/BreadCrumbBar.vue';
+import NavBar from './components/globals/NavBar.vue';
+import Footer from './components/globals/Footer.vue'
+</script>
+
 <template>
-  <div class="z-50">
-    <NuxtLoadingIndicator :height="4" />
-  </div>
+ 
+  
   <NavBar />
-  <BreadCrumbBar />
-  <div>
+  <div class="mt-16">
+    <BreadCrumbBar />
+    <NuxtLoadingIndicator :height="4" />
     <NuxtPage />
   </div>
   <Footer />

@@ -7,7 +7,7 @@
     <div class="mb-3 text-2xl  bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border border-emerald-900">
       <h3>Recent Scores</h3>
     </div>
-    <div v-for="i in 10" :key="i" class=" border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm ">
+    <div v-for="i in 10" :key="i" class="active:bg-emerald-600/30 active:shadow-none border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm ">
       <p class="text-lg font-semibold">
         Yesterday
       </p>

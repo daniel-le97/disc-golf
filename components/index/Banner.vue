@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="relative bg-emerald-500 border-y-4 border-gray-200  flex bg-[url('https://images.unsplash.com/photo-1569075319321-f73e651c2c7a?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-contain " >
+  <div class="relative bg-emerald-500 border-y-4 border-gray-200  lg:flex bg-[url('https://images.unsplash.com/photo-1569075319321-f73e651c2c7a?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-contain " >
    
-    <div class="w-1/2 flex items-center justify-center p-5 relative overflow-hidden   ">
+    <div class="lg:w-1/2 flex items-center justify-center p-5 relative overflow-hidden   ">
       <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center z-10 backdrop-blur-md h-full bg-white/10 rounded-md border-2 border-white/10 flex flex-col items-center justify-center p-4 shadow-xl">
         <h2 class="mb-6  text-3xl font-extrabold text-white sm:text-4xl sm:leading-none">
           Community of disk golfers<br class="hidden md:block">
@@ -33,7 +33,7 @@
     
     </div>
 
-    <div class="w-1/2">
+    <div class="lg:w-1/2">
       <img src="https://images.unsplash.com/photo-1655161920414-e25dc7e0f1de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="person grabbing discs out of bag" class="object-fit">
     </div>
   </div>

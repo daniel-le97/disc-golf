@@ -1,6 +1,6 @@
 <script  setup>
 import { ref, onMounted } from 'vue';
-import SignInModal from "./globals/SignInModal.vue";
+import SignInModal from "./SignInModal.vue";
 
 // generate a list of links that has to an id, to which will be home,tournaments,leagues,clubs,courses,series,videos,trading post,contact
 const items = ref([
@@ -50,7 +50,7 @@ const updateIndicatorPosition = () => {
 </script>
 
 <template>
-  <div class="w-full h-16 shadow-md flex items-center justify-center bg-zinc-800 text-white py-0 px-5">
+  <div class="w-full h-16 shadow-md flex items-center justify-center bg-zinc-800 text-white py-0 px-5 fixed top-0 z-50">
     <div class="flex w-full h-full space-x-4 justify-between">
       <div class="px-5 flex space-x-4 items-center justify-center">
         <img
