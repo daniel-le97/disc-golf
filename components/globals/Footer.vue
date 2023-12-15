@@ -18,7 +18,7 @@ import SignUpModal from './SignUpModal.vue';
                     Want to be be part of the community ?
                 </span>
                 <span class="block text-emerald-500">
-                    Sign up to help contribute!
+                    Sign up now!
                 </span>
             </h2>
             <div class="mt-5 lg:mt-0 lg:flex-shrink-0">

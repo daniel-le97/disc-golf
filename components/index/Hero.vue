@@ -51,7 +51,7 @@ async function login() {
     class="relative  flex flex-col items-center justify-center bg-black hero-image   min-h-[50vh]  lg:min-h-screen "
   >
    <div class=" text-center p-10">
-    <h1 class="text-white text-4xl lg:text-7xl font-extrabold leading-relaxed">Join a Thriving <span class="text-emerald-500"> Disc Golf</span> Network, Sharing <span class="text-emerald-500"> Skills</span> and <span class="text-emerald-500"> Passion</span>. </h1>
+    <h1 class="text-white text-4xl lg:text-7xl font-extrabold leading-relaxed">Join a Thriving <span class="text-emerald-500"> Disc Golf</span> Community, Sharing <span class="text-emerald-500"> Skills</span> and <span class="text-emerald-500"> Passion</span>. </h1>
    </div>
     <div class=" w-1/2">
       <img src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="" class="object-fit  ">
