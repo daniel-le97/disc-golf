@@ -141,7 +141,7 @@
     </div>
   </div>
   <div class="min-h-screen bg-gradient-to-tl from-green-200 to-blue-800 flex justify-center items-center py-20">
-    <p />
+    <p> test</p>
   </div>
 </template>
 
