@@ -46,7 +46,7 @@ const updateIndicatorPosition = () => {
 };
 
 
-
+const drawerIsOpen = ref(false)
 </script>
 
 <template>
@@ -57,11 +57,11 @@ const updateIndicatorPosition = () => {
           src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="logo"
           class="rounded-full shadow-md w-12 h-12"
         >
-        <span class="font-extrabold text-2xl">
+        <span class="font-extrabold lg:text-2xl">
           Disk Golf Scene
         </span>
       </div>
-      <div class="flex space-x-4  items-center relative ">
+      <div class="lg:flex space-x-4  items-center relative hidden  ">
         <NuxtLink
           v-for="item in items" :key="item.name" :to="item.href" class="text-lg" active-class="active"
           @click="updateIndicatorPosition"
@@ -71,7 +71,7 @@ const updateIndicatorPosition = () => {
         <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
       </div>
 
-      <div class=" flex items-center justify-center space-x-4">
+      <div class=" hidden lg:flex items-center justify-center space-x-4">
    <div >
     <SignInModal/>
    </div>
@@ -96,6 +96,33 @@ const updateIndicatorPosition = () => {
       </template>
     </UDropdown>
       </div>
+
+
+      <!-- MOBIlE MENU -->
+   <div class="flex items-center lg:hidden ">
+      
+      <Icon name="solar:hamburger-menu-broken" class="text-5xl" @click="drawerIsOpen = true" />
+
+      <USlideover v-model="drawerIsOpen">
+        <div class="p-4 flex-1">
+          <Icon name="solar:close-square-bold" class="text-5xl" @click="drawerIsOpen = false" />
+          
+           <div class="flex flex-col space-x-4  items-center relative space-y-5   ">
+          <NuxtLink
+            v-for="item in items" :key="item.name" :to="item.href" class="text-5xl" active-class="active"
+            @click="updateIndicatorPosition"
+          >
+            {{ item.name }}
+          </NuxtLink>
+          <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
+        </div>
+        </div>
+      </USlideover>
+    </div>
+      <!-- !MOBIlE MENU -->
+
+
+
     </div>
   </div>
 </template>
