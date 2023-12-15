@@ -5,22 +5,30 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "generate": "nuxt generate",
+    "generate:client": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:server": "drizzle-kit generate:pg",
+    "studio": "drizzle-kit studio",
+    "push": "drizzle-kit push:pg",
+    "sync": "pnpm run generate:server && pnpm run push",
+    "upgrade": "pnpm dlx taze major -w && pnpm i",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@auth/core": "^0.18.6",
+    "@nuxt/ui": "^2.11.1",
+    "drizzle-orm": "^0.29.1",
+    "postgres": "^3.4.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.5",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "drizzle-kit": "^0.20.6",
     "eslint": "^8.55.0",
     "nuxt": "^3.8.2",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
-  },
-  "dependencies": {
-    "@nuxt/ui": "^2.11.1"
   }
 }
