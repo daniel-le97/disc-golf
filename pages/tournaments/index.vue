@@ -10,7 +10,7 @@ const tournaments = ref(Tournaments)
 <template>
   <main class="min-h-screen">
     <div class="   flex p-10 space-x-5">
-      <div class=" w-1/6  items-end justify-start flex flex-col p-5  border-r-gray-300 border-r">
+      <div class=" w-1/6  items-end justify-start flex flex-col p-5  border-r-gray-300 border-r  ">
         <LeftColumn />
       </div>
       <div class="w-3/4 ">
@@ -19,7 +19,8 @@ const tournaments = ref(Tournaments)
             Upcoming disc golf tournaments in the United States
           </h1>
         </div>
-        <TournamentCard v-for="tournament in tournaments" :title="tournament.title" :host="tournament.host" :date="tournament.date" :location="tournament.location" :registrants="tournament.registrants" :registration-open="tournament.registrationOpen" />
+        <TournamentCard v-for="tournament in tournaments" v-if="tournaments.length >= 0" :title="tournament.title" :host="tournament.host" :date="tournament.date" :location="tournament.location" :registrants="tournament.registrants" :registration-open="tournament.registrationOpen" />
+
       </div>
     </div>
   </main>

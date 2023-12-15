@@ -27,9 +27,9 @@
           </div>
         </div>
         <div>
-          <div class="flex space-x-1 items-center  justify-end ">
+          <div class="flex space-x-1  justify-end ">
             <p>71</p>
-            <p class="text-xl font-semibold">
+            <p class="text-xl font-semibold text-green-500">
               +9
             </p>
           </div>

@@ -4,7 +4,7 @@
 
 <template>
   <div class="flex flex-col p-5 text-sm bg-gray-100 rounded border border-gray-300">
-    <div class="mb-3 text-2xl font-semibold bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border border-emerald-900">
+    <div class="mb-3 text-2xl  bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border border-emerald-900">
       <h3>Recent Aces</h3>
     </div>
     <div

@@ -57,10 +57,16 @@ const unitedStatesLocations = [
 </script>
 
 <template>
-  <div>
-    <div class="p-2 rounded border border-emerald-900 bg-green-500 font-bold text-white shadow-md mb-5">
-      Add A New <br> Tournament
-    </div>
+  <div >
+    <button class="p-2 rounded border-2 border-emerald-900/50 bg-green-500 font-bold text-white shadow-md mb-5 relative items-center flex space-x-2">
+     
+          <Icon name="material-symbols:add-circle" class="text-4xl " />
+        
+      <span>
+       Add A New <br> Tournament
+     </span>
+     
+    </button>
     <div class="">
       <h3>Canada</h3>
       <p v-for="c in canadaProvinces" :key="c">

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="relative bg-green-500">
+  <div class="relative bg-green-500 ">
     <div class="absolute inset-x-0 bottom-0">
       <svg viewBox="0 0 224 12" fill="currentColor" class="w-full -mb-1 text-white" preserveAspectRatio="none">
         <path

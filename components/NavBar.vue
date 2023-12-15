@@ -1,5 +1,6 @@
 <script  setup>
-import { onMounted, ref } from 'vue'
+import { ref, onMounted } from 'vue';
+import SignInModal from "./globals/SignInModal.vue";
 
 // generate a list of links that has to an id, to which will be home,tournaments,leagues,clubs,courses,series,videos,trading post,contact
 const items = ref([
@@ -11,17 +12,41 @@ const items = ref([
   { name: 'Series', href: '/series' },
 ])
 
-const indicatorPosition = ref(0)
+const profileDropdownItems = [
+  [{
+    label: 'ben@example.com',
+    slot: 'account',
+    disabled: true
+  }], 
+  [{
+    label: 'Profile',
+    icon: 'i-heroicons-user'
+  }],
+  [{
+    label: 'Settings',
+    icon: 'i-heroicons-cog-8-tooth'
+  }],
+   [{
+    label: 'Sign out',
+    icon: 'i-heroicons-arrow-left-on-rectangle'
+  }]
+]
+const indicatorPosition = ref(0);
+
+onMounted(() => {
+  updateIndicatorPosition();
+});
 
 // Function to update the indicator position based on the active link
-function updateIndicatorPosition() {
-  const activeLink = document.querySelector('.active')
-  if (activeLink)
-    indicatorPosition.value = activeLink.offsetLeft
-}
-onMounted(() => {
-  updateIndicatorPosition()
-})
+const updateIndicatorPosition = () => {
+  const activeLink = document.querySelector('.active');
+  if (activeLink) {
+    indicatorPosition.value = activeLink.offsetLeft;
+  }
+};
+
+
+
 </script>
 
 <template>
@@ -44,6 +69,32 @@ onMounted(() => {
           {{ item.name }}
         </NuxtLink>
         <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
+      </div>
+
+      <div class=" flex items-center justify-center space-x-4">
+   <div >
+    <SignInModal/>
+   </div>
+         <UDropdown :items="profileDropdownItems" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
+      <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
+
+      <template #account="{ item }">
+        <div class="text-left">
+          <p>
+            Signed in as
+          </p>
+          <p class="truncate font-medium text-gray-900 dark:text-white">
+            {{ item.label }}
+          </p>
+        </div>
+      </template>
+
+      <template #item="{ item }">
+        <span class="truncate">{{ item.label }}</span>
+
+        <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
+      </template>
+    </UDropdown>
       </div>
     </div>
   </div>
