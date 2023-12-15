@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <div class="flex flex-col p-5 text-sm bg-gray-100 rounded border border-gray-300">
-    <div class="mb-3 text-2xl font-semibold bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border border-emerald-900">
+  <div class="flex flex-col p-5 text-sm text-zinc-900 bg-gray-100 rounded border border-gray-300">
+    <div class="mb-3 text-2xl  bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border-2 border-emerald-900/20">
       <h3>Recent Scores</h3>
     </div>
-    <div v-for="i in 10" :key="i" class=" border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm ">
-      <p class="text-lg">
+    <div v-for="i in 10" :key="i" class="active:bg-emerald-600/30 active:shadow-none border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm ">
+      <p class="text-lg font-semibold">
         Yesterday
       </p>
       <div class="flex justify-between items-center">
@@ -29,7 +29,7 @@
         <div>
           <div class="flex space-x-1  justify-end ">
             <p>71</p>
-            <p class="text-xl font-semibold text-green-500">
+            <p class="text-xl font-semibold text-emerald-500">
               +9
             </p>
           </div>

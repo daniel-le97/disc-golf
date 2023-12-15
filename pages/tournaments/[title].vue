@@ -55,9 +55,9 @@ const items = [
   <main v-if="tournament" class="min-h-screen px-20">
     <div class="flex p-10 space-x-5">
       <div class="w-1/6 space-y-5  sticky h-full top-0">
-        <div class=" border-black/30 border-2 text-2xl  py-2 bg-orange-500 text-white font-bold drop-shadow  shadow-inset flex justify-center rounded ">
-          <Icon name="mdi:flag" class="text-3xl" />
-         Tournament
+        <div class=" border-black/30 border-2 text-2xl  py-2 bg-orange-500 text-white font-extrabold drop-shadow  shadow-inset flex justify-center rounded items-center gap-1.5 ">
+          <Icon name="tabler:tournament" class="text-3xl" />
+        <span> Tournament</span>
         </div>
         <div class=" text-center text-xl">
           HOSTED BY: <br>
@@ -72,7 +72,7 @@ const items = [
         </div>
       </div>
       <div class=" w-5/6">
-        <h1 class="text-4xl font-bold ">
+        <h1 class="text-4xl font-extrabold ">
           {{ tournament.title }}
         </h1>
         <div class="my-2">
@@ -115,7 +115,7 @@ const items = [
             </template>
 
             <div v-if="item.key === 'about'" class="space-y-3">
-             <div class=" flex p-5 pl-0 bg-lime-300/20 border border-emerald-900/20">
+             <div class=" flex p-5 pl-0 bg-emerald-300/20 border border-emerald-900/20 rounded-b">
               <!-- LEFT COLUMN -->
               <div class="lg:w-3/5 p-2 bg-white border rounded rounded-l-none border-l-0 border-emerald-900/20">
                 <div class="flex w-full items-center justify-center">

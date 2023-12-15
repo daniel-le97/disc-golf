@@ -1,6 +1,6 @@
 <script  setup>
 import { onMounted, ref } from 'vue';
-import SignInModal from './globals/SignInModal.vue';
+import SignInModal from './SignInModal.vue';
 
 // generate a list of links that has to an id, to which will be home,tournaments,leagues,clubs,courses,series,videos,trading post,contact
 const items = ref([
@@ -46,18 +46,18 @@ function updateIndicatorPosition() {
 </script>
 
 <template>
-  <div class="w-full h-16 shadow-md flex items-center justify-center bg-zinc-800 text-white py-0 px-5">
+  <div class="w-full h-16 flex items-center justify-center shadow-md bg-zinc-800 text-white py-0 px-5 fixed top-0 z-50">
     <div class="flex w-full h-full space-x-4 justify-between">
       <div class="px-5 flex space-x-4 items-center justify-center">
         <img
           src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="logo"
           class="rounded-full shadow-md w-12 h-12"
         >
-        <span class="font-bold text-xl">
+        <span class="font-extrabold text-2xl">
           Disk Golf Scene
         </span>
       </div>
-      <div class="flex space-x-4  items-end relative ">
+      <div class="flex space-x-4  items-center relative ">
         <NuxtLink
           v-for="item in items" :key="item.name" :to="item.href" class="text-lg" active-class="active"
           @click="updateIndicatorPosition"
@@ -102,7 +102,7 @@ function updateIndicatorPosition() {
 }
 
 .active {
-  @apply bg-gradient-to-b from-emerald-500 to-zinc-700  rounded-t-sm px-2 transition-all duration-300;
+  @apply text-emerald-500 transition-all duration-300;
 }
 
 .indicator {
