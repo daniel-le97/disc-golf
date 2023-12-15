@@ -1,35 +1,42 @@
+import type { ConsolaInstance } from 'consola'
 import { createConsola } from 'consola'
 
-export const logger = createConsola({
-  reporters: [
-    {
-      log: (logObj) => {
-        console.log(JSON.stringify(logObj))
-      },
-      info: (logObj) => {
-        console.log(JSON.stringify(logObj))
-      },
-    },
-  ],
-})
-
-logger.log('foo bar')
-
 class Logger {
-  constructor() {
-    this.log = this.log.bind(this)
-    this.info = this.info.bind(this)
+  private consola: ConsolaInstance
+  constructor(consola?: ConsolaInstance) {
+    if (consola) {
+      this.consola = consola
+      return
+    }
+    this.consola = createConsola()
   }
 
-  log(...args) {
-    console.log(JSON.stringify(...args))
+  private sendLog() {
+    
   }
 
-  info(logObj) {
-    console.log(JSON.stringify(logObj))
+
+  withtag(tag: string) {
+    return new Logger(this.consola.withTag(tag))
   }
 
-  error(logObj) {
-    console.log(JSON.stringify(logObj))
+  log(...args: any[]) {
+    this.consola.log(args)
+  }
+
+  info(...args: any[]) {
+    this.consola.info(args)
+  }
+
+  success(...args: any[]) {
+    this.consola.success(args)
+  }
+
+  warn(...args: any[]) {
+    this.consola.warn(args)
+  }
+
+  error(...args: any[]) {
+    this.consola.error(args)
   }
 }
