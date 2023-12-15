@@ -48,16 +48,16 @@ async function login() {
 
 <template>
   <section
-    class="relative flex items-center justify-center   mb-8 bg-black min-h-[84vh] "
+    class="relative  flex flex-col items-center justify-center bg-black hero-image    min-h-screen "
   >
-   <div class="w-1/2 text-center">
-    <h1 class="text-white text-9xl font-bold">Disk Golf </h1>
+   <div class=" text-center p-10">
+    <h1 class="text-white text-7xl font-extrabold leading-relaxed">Join a Thriving <span class="text-emerald-500"> Disc Golf</span> Network, Sharing <span class="text-emerald-500"> Skills</span> and <span class="text-emerald-500"> Passion</span>. </h1>
    </div>
     <div class=" w-1/2">
       <img src="/vecteezy_vector-disc-golf-t-shirt-design-modern-typography_20548240.jpg" alt="" class="object-fit  ">
     </div>
 
-    <div class="absolute -bottom-8 w-full  py-4 flex items-center justify-center  shadow-xl bg-zinc-800">
+    <!-- <div class="absolute -bottom-8 w-full  py-4 flex items-center justify-center  shadow-xl bg-zinc-800">
       <div v-for="bannerItem in bannerItems" class=" p-2  flex space-x-0.5 bg-gray-200 mx-2 rounded shadow-md">
         <span class="text-green-600">
           {{ bannerItem.number }}
@@ -69,7 +69,7 @@ async function login() {
           {{ bannerItem.name }}
         </span>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 

@@ -3,15 +3,15 @@
 </script>
 
 <template>
-  <div class="flex flex-col p-5 text-sm bg-gray-100 rounded border border-gray-300">
-    <div class="mb-3 text-2xl  bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border border-emerald-900">
+  <div class="flex flex-col text-zinc-900 p-5 text-sm bg-gray-100 rounded border border-gray-300 hero-image">
+    <div class="mb-3 text-2xl  bg-green-500 text-white font-semibold w-fit p-1 px-2 rounded border border-emerald-900">
       <h3>Recent Aces</h3>
     </div>
     <div
       v-for="i in 10"
       class=" border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm "
     >
-      <p class="text-lg">
+      <p class="text-lg font-bold ">
         Yesterday
       </p>
       <div class="flex justify-between items-center">
