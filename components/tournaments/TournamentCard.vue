@@ -28,7 +28,7 @@ defineProps({
         <!-- <p v-if="registrationOpen" class="rounded-full  px-2  bg-orange-400 text-white text-xs flex items-center justify-center shadow-sm hover:bg-orange-300 hover:shadow-xl transition-all duration-150  ">
           Registration Open
         </p> -->
-        <UBadge v-if="registrationOpen" :ui="{ rounded: 'rounded-full' }" class="bg-orange-400 shadow-md" size="xs">Registration Open</UBadge>
+        <UBadge v-if="registrationOpen" :ui="{ rounded: 'rounded-full' }" class="bg-orange-400 dark:bg-orange-400 shadow-md" size="xs">Registration Open</UBadge>
       </div>
       <p class="text-sm">
         at {{ location }}

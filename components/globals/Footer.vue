@@ -107,9 +107,9 @@ import SignUpModal from './SignUpModal.vue';
           </ul>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2 text-zinc-900">
           <div class="text-center sm:text-left">
-            <p class="text-lg font-extrabold text-gray-900">
+            <p class="text-lg font-extrabold ">
               About Us
             </p>
 
@@ -139,7 +139,7 @@ import SignUpModal from './SignUpModal.vue';
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-extrabold text-gray-900">
+            <p class="text-lg font-extrabold ">
               Our Services
             </p>
 
@@ -165,7 +165,7 @@ import SignUpModal from './SignUpModal.vue';
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-extrabold text-gray-900">
+            <p class="text-lg font-extrabold ">
               Helpful Links
             </p>
 
@@ -183,7 +183,7 @@ import SignUpModal from './SignUpModal.vue';
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-extrabold text-gray-900">
+            <p class="text-lg font-extrabold ">
               Contact Us
             </p>
 
@@ -195,7 +195,7 @@ import SignUpModal from './SignUpModal.vue';
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0 text-gray-900"
+                    class="h-5 w-5 shrink-0 "
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -219,7 +219,7 @@ import SignUpModal from './SignUpModal.vue';
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0 text-gray-900"
+                    class="h-5 w-5 shrink-0 "
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -241,7 +241,7 @@ import SignUpModal from './SignUpModal.vue';
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 shrink-0 text-gray-900"
+                  class="h-5 w-5 shrink-0 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
