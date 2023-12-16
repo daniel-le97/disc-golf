@@ -1,12 +1,12 @@
 <script  setup>
-import { ref, onMounted } from 'vue';
-import SignInModal from "./SignInModal.vue";
+import { onMounted, ref } from 'vue';
+import SignInModal from './SignInModal.vue';
 
 // generate a list of links that has to an id, to which will be home,tournaments,leagues,clubs,courses,series,videos,trading post,contact
 const items = ref([
   { name: 'Home', href: '/' },
   { name: 'Tournaments', href: '/tournaments' },
-  { name: 'Leagues', href: '/leagues' },
+  { name: 'Where To Buy', href: '/leagues' },
   { name: 'Clubs', href: '/clubs' },
   { name: 'Courses', href: '/courses' },
   { name: 'Series', href: '/series' },
@@ -16,34 +16,33 @@ const profileDropdownItems = [
   [{
     label: 'ben@example.com',
     slot: 'account',
-    disabled: true
-  }], 
+    disabled: true,
+  }],
   [{
     label: 'Profile',
-    icon: 'i-heroicons-user'
+    icon: 'i-heroicons-user',
   }],
   [{
     label: 'Settings',
-    icon: 'i-heroicons-cog-8-tooth'
+    icon: 'i-heroicons-cog-8-tooth',
   }],
-   [{
+  [{
     label: 'Sign out',
-    icon: 'i-heroicons-arrow-left-on-rectangle'
-  }]
+    icon: 'i-heroicons-arrow-left-on-rectangle',
+  }],
 ]
-const indicatorPosition = ref(0);
+const indicatorPosition = ref(0)
 
 onMounted(() => {
-  updateIndicatorPosition();
-});
+  updateIndicatorPosition()
+})
 
 // Function to update the indicator position based on the active link
-const updateIndicatorPosition = () => {
-  const activeLink = document.querySelector('.active');
-  if (activeLink) {
-    indicatorPosition.value = activeLink.offsetLeft;
-  }
-};
+function updateIndicatorPosition() {
+  const activeLink = document.querySelector('.active')
+  if (activeLink)
+    indicatorPosition.value = activeLink.offsetLeft
+}
 
 
 const drawerIsOpen = ref(false)
@@ -70,7 +69,6 @@ const drawerIsOpen = ref(false)
         </NuxtLink>
         <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
       </div>
-
       <div class=" hidden lg:flex items-center justify-center space-x-4">
    <div >
     <SignInModal/>
@@ -87,14 +85,26 @@ const drawerIsOpen = ref(false)
             {{ item.label }}
           </p>
         </div>
-      </template>
+        <UDropdown :items="profileDropdownItems" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
+          <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
 
-      <template #item="{ item }">
-        <span class="truncate">{{ item.label }}</span>
+          <template #account="{ item }">
+            <div class="text-left">
+              <p>
+                Signed in as
+              </p>
+              <p class="truncate font-medium text-gray-900 dark:text-white">
+                {{ item.label }}
+              </p>
+            </div>
+          </template>
 
-        <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
-      </template>
-    </UDropdown>
+          <template #item="{ item }">
+            <span class="truncate">{{ item.label }}</span>
+
+            <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
+          </template>
+        </UDropdown>
       </div>
 
 
