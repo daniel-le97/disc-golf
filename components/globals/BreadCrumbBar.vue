@@ -26,8 +26,8 @@ function getBreadcrumbIcon (label:string) {
   switch (label) {
     case 'tournaments':
       return   'tabler:tournament';
-    case 'leagues':
-      return  'carbon:partition-specific';
+    case 'shops':
+      return  'ph:shopping-cart';
   case 'clubs':
   return 'simple-icons:clubhouse';
   case 'courses':
@@ -45,33 +45,54 @@ watchEffect(() => updateBreadcrumb())
 </script>
 
 <template>
-  <nav class=" w-full px-1 lg:px-20 flex-wrap lg:flex-nowrap  flex items-center  py-1.5 bg-gray-200 dark:bg-zinc-700 dark:text-white shadow-md text-sm ">
-    <NuxtLink to="/" class="text-sm flex items-center gap-1 hover:text-emerald-500 transition-colors duration-300">
-   <Icon name="uil:home" class=""  />
-      <span>Home</span>
-    </NuxtLink>
-  <Icon name="material-symbols:chevron-right-rounded" class=" text-lg" />
-    <span v-for="(item, index) in items" :key="index" class=" flex items-center hover:text-emerald-500 transition-colors duration-300">
+  <Transition name="slide-fade" >
+   <nav v-if="route.path !== '/'" class=" w-full px-1 lg:px-20 flex-wrap lg:flex-nowrap  flex items-center  py-1.5 bg-gray-200 dark:bg-zinc-700 dark:text-white shadow-md text-sm ">
+      <NuxtLink to="/" class="text-sm flex items-center gap-1 hover:text-emerald-500 transition-colors duration-300">
+     <Icon name="uil:home" class=""  />
+        <span>Home</span>
+      </NuxtLink>
+    <Icon name="material-symbols:chevron-right-rounded" class=" text-lg" />
+      <span v-for="(item, index) in items" :key="index" class=" flex items-center hover:text-emerald-500 transition-colors duration-300">
       
-      <NuxtLink :to="item.to" class="flex items-center">
-          <Icon :name="getBreadcrumbIcon(item.label)" class="  mr-1"   
+        <NuxtLink :to="item.to" class="flex items-center">
+            <Icon :name="getBreadcrumbIcon(item.label)" class="  mr-1"   
       
          
-           />
+             />
 
         
-        <span>
-           {{ item.label }} 
-        </span>
+          <span>
+             {{ item.label }} 
+          </span>
         
-        </NuxtLink>
-      <span v-if="index < items.length - 1"  class="flex items-center">    <Icon name="material-symbols:chevron-right-rounded" class="text-lg " /></span>
-    </span>
+          </NuxtLink>
+        <span v-if="index < items.length - 1"  class="flex items-center">    <Icon name="material-symbols:chevron-right-rounded" class="text-lg " /></span>
+      </span>
     
-  </nav>
+    </nav>
+  </Transition>
+ 
 </template>
 
 <style scoped>
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0s 
+}
+
+.slide-fade-enter-from {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
 .breadcrumb {
   margin: 10px 0;
 }

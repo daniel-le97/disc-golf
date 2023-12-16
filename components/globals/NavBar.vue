@@ -6,7 +6,7 @@ import SignInModal from './SignInModal.vue';
 const items = ref([
   { name: 'Home', href: '/' },
   { name: 'Tournaments', href: '/tournaments' },
-  { name: 'Where To Buy', href: '/leagues' },
+  { name: 'Shops', href: '/shops' },
   { name: 'Clubs', href: '/clubs' },
   { name: 'Courses', href: '/courses' },
   { name: 'Series', href: '/series' },
@@ -77,7 +77,7 @@ const isDark = computed({
           class="rounded-full shadow-md w-12 h-12"
         >
         <span class="font-extrabold lg:text-2xl">
-          Disk Golf Scene
+         GSDGC
         </span>
       </div>
       <div class="lg:flex space-x-4  items-center relative hidden  ">
