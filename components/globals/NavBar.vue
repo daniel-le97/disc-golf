@@ -9,7 +9,7 @@ const items = ref([
   { name: 'Shops', href: '/shops' },
   { name: 'Clubs', href: '/clubs' },
   { name: 'Courses', href: '/courses' },
-  { name: 'Series', href: '/series' },
+  { name: 'Info/Donate', href: '/series' },
 ])
 
 const profileDropdownItems = [
@@ -44,17 +44,7 @@ function updateIndicatorPosition() {
     indicatorPosition.value = activeLink.offsetLeft
 }
 
-
 const drawerIsOpen = ref(false)
-
-
-
-
-
-
-
-
-
 
 const colorMode = useColorMode()
 
@@ -64,7 +54,7 @@ const isDark = computed({
   },
   set() {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-  }
+  },
 })
 </script>
 
@@ -77,7 +67,7 @@ const isDark = computed({
           class="rounded-full shadow-md w-12 h-12"
         >
         <span class="font-extrabold lg:text-2xl">
-         GSDGC
+          GSDGC
         </span>
       </div>
       <div class="lg:flex space-x-4  items-center relative hidden  ">
@@ -90,70 +80,65 @@ const isDark = computed({
         <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
       </div>
       <div class=" hidden lg:flex items-center justify-center space-x-4">
-   <div >
-    <SignInModal/>
-   </div>
-     <UDropdown :items="profileDropdownItems" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
-            <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
+        <div>
+          <SignInModal />
+        </div>
+        <UDropdown :items="profileDropdownItems" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
+          <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
 
-            <template #account="{ item }">
-              <div class="text-left">
-                <p>
-                  Signed in as
-                </p>
-                <p class="truncate font-medium text-gray-900 dark:text-white">
-                  {{ item.label }}
-                </p>
-              </div>
-            </template>
+          <template #account="{ item }">
+            <div class="text-left">
+              <p>
+                Signed in as
+              </p>
+              <p class="truncate font-medium text-gray-900 dark:text-white">
+                {{ item.label }}
+              </p>
+            </div>
+          </template>
 
-            <template #item="{ item }">
-              <span class="truncate">{{ item.label }}</span>
+          <template #item="{ item }">
+            <span class="truncate">{{ item.label }}</span>
 
-              <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
-            </template>
-          </UDropdown>
+            <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
+          </template>
+        </UDropdown>
 
+        <ClientOnly>
+          <UButton
+            :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+            color="gray"
+            variant="ghost"
+            aria-label="Theme"
+            @click="isDark = !isDark"
+          />
 
-           <ClientOnly>
-      <UButton
-        :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-        color="gray"
-        variant="ghost"
-        aria-label="Theme"
-        @click="isDark = !isDark"
-      />
-
-      <template #fallback>
-        <div class="w-8 h-8" />
-      </template>
-    </ClientOnly>
-          </div>
+          <template #fallback>
+            <div class="w-8 h-8" />
+          </template>
+        </ClientOnly>
+      </div>
       <!-- MOBIlE MENU -->
-   <div class="flex items-center lg:hidden ">
-      
-      <Icon name="solar:hamburger-menu-broken" class="text-5xl" @click="drawerIsOpen = true" />
+      <div class="flex items-center lg:hidden ">
+        <Icon name="solar:hamburger-menu-broken" class="text-5xl" @click="drawerIsOpen = true" />
 
-      <USlideover v-model="drawerIsOpen">
-        <div class="p-4 flex-1 bg-zinc-900">
-          <Icon name="solar:close-square-bold" class="text-5xl" @click="drawerIsOpen = false" />
-          
-           <div class="flex flex-col lg:space-x-4  items-center justify-between  relative space-y-10 my-10  ">
-          <NuxtLink
-            v-for="item in items" :key="item.name" :to="item.href" class="text-5xl font-extrabold" active-class="active"
-        @click="drawerIsOpen = false"
-          >
-            {{ item.name }}
-          </NuxtLink>
-          <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
-        </div>
-        </div>
-      </USlideover>
-    </div>
+        <USlideover v-model="drawerIsOpen">
+          <div class="p-4 flex-1 bg-zinc-900">
+            <Icon name="solar:close-square-bold" class="text-5xl" @click="drawerIsOpen = false" />
+
+            <div class="flex flex-col lg:space-x-4  items-center justify-between  relative space-y-10 my-10  ">
+              <NuxtLink
+                v-for="item in items" :key="item.name" :to="item.href" class="text-5xl font-extrabold" active-class="active"
+                @click="drawerIsOpen = false"
+              >
+                {{ item.name }}
+              </NuxtLink>
+              <!-- <span class="indicator" :style="{ transform: 'translateX(' + indicatorPosition + 'px)' }"></span> -->
+            </div>
+          </div>
+        </USlideover>
+      </div>
       <!-- !MOBIlE MENU -->
-
-
-
     </div>
   </div>
 </template>
