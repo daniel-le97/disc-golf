@@ -8,7 +8,7 @@
 
    <div class="lg:flex  items-center justify-center my-16 space-y-10 lg:space-y-0 lg:my-24 p-5 lg:p-20 ">
 
-    <div class="lg:w-1/2 p-4 lg:p-10 flex flex-col space-y-5">
+    <div class="lg:w-1/2 p-4 lg:p-10 flex flex-col space-y-5 dark:text-white">
 
 
 
@@ -24,7 +24,7 @@
                     href="/"
                   >
                       <Icon name="uil:envelope" class="text-2xl text-emerald-500" />
-                    <span class="flex-1 text-gray-700">john@doe.com</span>
+                    <span class="flex-1 ">john@doe.com</span>
                   </a>
                 </li>
 
@@ -34,7 +34,7 @@
                     href="/"
                   >
                    <Icon name="uil:phone" class="text-2xl" />
-                    <span class="flex-1 text-gray-700">0123456789</span>
+                    <span class="flex-1 ">0123456789</span>
                   </a>
                 </li>
 
@@ -42,7 +42,7 @@
                   class="flex items-center justify-center  gap-1.5"
                 >
                <Icon name="uil:location-point" class="text-2xl text-emerald-500" />
-                  <address class="-mt-0.5 flex-1 not-italic text-gray-700">
+                  <address class="-mt-0.5 flex-1 not-italic ">
                     213 Lane, London, United Kingdom
                   </address>
                 </li>
@@ -94,9 +94,9 @@
     </div>
 <div class="lg:w-1/2 z-10 relative group">
     <div class="space-y-5 p-10 shadow-md rounded backdrop-blur-md border-2 border-gray-100/20">
-      <div class="flex items-center justify-between gap-1.5 text-emerald-950">
-        <h3 class="text-4xl font-extrabold">Get In Touch</h3>
-        <Icon name="material-symbols:connect-without-contact-outline-rounded" class="text-8xl drop-shadow-md" />
+      <div class="flex items-center justify-between gap-1.5 text-emerald-950 dark:text-white">
+        <h3 class="text-4xl font-extrabold ">Get In Touch</h3>
+        <Icon name="material-symbols:connect-without-contact-outline-rounded" class="text-8xl drop-shadow-md " />
       </div>
     <p>Have any questions or concerns regarding events, tournaments or feedback for the website fill out the form and get in contact with someone! </p>
 
@@ -105,7 +105,7 @@
   label="Name"
   required
 >
-  <UInput placeholder="John Doe" icon="i-heroicons-user" />
+  <UInput placeholder="John Doe" icon="i-heroicons-user"  />
 </UFormGroup>
 <UFormGroup
   size="xl"

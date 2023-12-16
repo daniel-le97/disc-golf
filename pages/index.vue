@@ -8,7 +8,7 @@ import Contact from '~/components/index/Contact.vue'
 </script>
 
 <template>
-  <main class="min-h-screen   bg-white ">
+  <main class="min-h-screen   ">
     <Hero />
 
   

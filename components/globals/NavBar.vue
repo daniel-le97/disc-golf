@@ -46,10 +46,30 @@ function updateIndicatorPosition() {
 
 
 const drawerIsOpen = ref(false)
+
+
+
+
+
+
+
+
+
+
+const colorMode = useColorMode()
+
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set() {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
 </script>
 
 <template>
-  <div class="w-full h-16 flex items-center justify-center shadow-md bg-zinc-800 text-white py-0 px-5 fixed top-0 z-50">
+  <div class="w-full h-16 flex items-center justify-center shadow-md dark:bg-zinc-800 bg-gray-100 text-zinc-900 dark:text-white py-0 px-5 fixed top-0 z-50">
     <div class="flex w-full h-full space-x-4 justify-between">
       <div class="px-5 flex space-x-4 items-center justify-center">
         <img
@@ -94,6 +114,20 @@ const drawerIsOpen = ref(false)
             </template>
           </UDropdown>
 
+
+           <ClientOnly>
+      <UButton
+        :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+        color="gray"
+        variant="ghost"
+        aria-label="Theme"
+        @click="isDark = !isDark"
+      />
+
+      <template #fallback>
+        <div class="w-8 h-8" />
+      </template>
+    </ClientOnly>
           </div>
       <!-- MOBIlE MENU -->
    <div class="flex items-center lg:hidden ">
@@ -101,12 +135,12 @@ const drawerIsOpen = ref(false)
       <Icon name="solar:hamburger-menu-broken" class="text-5xl" @click="drawerIsOpen = true" />
 
       <USlideover v-model="drawerIsOpen">
-        <div class="p-4 flex-1">
+        <div class="p-4 flex-1 bg-zinc-900">
           <Icon name="solar:close-square-bold" class="text-5xl" @click="drawerIsOpen = false" />
           
-           <div class="flex flex-col space-x-4  items-center relative space-y-5   ">
+           <div class="flex flex-col lg:space-x-4  items-center justify-between  relative space-y-10 my-10  ">
           <NuxtLink
-            v-for="item in items" :key="item.name" :to="item.href" class="text-5xl" active-class="active"
+            v-for="item in items" :key="item.name" :to="item.href" class="text-5xl font-extrabold" active-class="active"
         @click="drawerIsOpen = false"
           >
             {{ item.name }}

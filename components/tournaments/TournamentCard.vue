@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink  :to="`tournaments/${title}`" class="flex border-b border-b-gray-300 p-2 hover:bg-gray-200 transition-all duration-150 text-gray-500 hover:text-gray-700 space-x-2">
+  <NuxtLink  :to="`tournaments/${title}`" class="flex border-b border-b-gray-300 p-2 hover:bg-gray-200 dark:hover:bg-zinc-900 transition-all duration-150 text-gray-500 hover:text-gray-700 dark:hover:text-gray-100 space-x-2 dark:text-gray-200">
     <div class="w-1/8  p-1 flex flex-col items-center justify-center">
       <p class="text-sm">
         December

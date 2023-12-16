@@ -45,7 +45,7 @@ watchEffect(() => updateBreadcrumb())
 </script>
 
 <template>
-  <nav class=" w-full px-1 lg:px-20 flex-wrap lg:flex-nowrap  flex items-center  py-1.5 bg-zinc-700 text-white shadow-md text-sm ">
+  <nav class=" w-full px-1 lg:px-20 flex-wrap lg:flex-nowrap  flex items-center  py-1.5 bg-gray-200 dark:bg-zinc-700 dark:text-white shadow-md text-sm ">
     <NuxtLink to="/" class="text-sm flex items-center gap-1 hover:text-emerald-500 transition-colors duration-300">
    <Icon name="uil:home" class=""  />
       <span>Home</span>

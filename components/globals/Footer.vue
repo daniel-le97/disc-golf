@@ -5,15 +5,15 @@ import SignUpModal from './SignUpModal.vue';
 </script>
 
 <template>
-  <footer class="bg-gray-100  ">
+  <footer class="bg-gray-100 dark:bg-zinc-800   ">
 
 
 
 
  <!-- CALL TO ACTION -->
-    <div class="bg-zinc-800 relative pt-32 lg:pt-16 ">
+    <div class="dark:bg-zinc-800 relative pt-32 lg:pt-16 ">
         <div class="absolute top-0 lg:flex lg:items-center lg:justify-between w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8   ">
-            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 class="text-3xl font-extrabold dark:text-white sm:text-4xl">
                 <span class="block">
                     Want to be be part of the community ?
                 </span>
@@ -53,7 +53,7 @@ import SignUpModal from './SignUpModal.vue';
           <p>LOGO</p>
           </div>
 
-          <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+          <p class="mt-6 max-w-md text-center leading-relaxed  sm:max-w-xs sm:text-left">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
             cum itaque neque.
           </p>
@@ -107,7 +107,7 @@ import SignUpModal from './SignUpModal.vue';
           </ul>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2 text-zinc-900">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2 text-zinc-900 dark:text-white">
           <div class="text-center sm:text-left">
             <p class="text-lg font-extrabold ">
               About Us
@@ -208,7 +208,7 @@ import SignUpModal from './SignUpModal.vue';
                     />
                   </svg>
 
-                  <span class="flex-1 text-gray-700">john@doe.com</span>
+                  <span class="flex-1 ">john@doe.com</span>
                 </a>
               </li>
 
@@ -232,7 +232,7 @@ import SignUpModal from './SignUpModal.vue';
                     />
                   </svg>
 
-                  <span class="flex-1 text-gray-700">0123456789</span>
+                  <span class="flex-1 ">0123456789</span>
                 </a>
               </li>
 
@@ -259,7 +259,7 @@ import SignUpModal from './SignUpModal.vue';
                   />
                 </svg>
 
-                <address class="-mt-0.5 flex-1 not-italic text-gray-700">
+                <address class="-mt-0.5 flex-1 not-italic ">
                   213 Lane, London, United Kingdom
                 </address>
               </li>
@@ -268,7 +268,7 @@ import SignUpModal from './SignUpModal.vue';
         </div>
       </div>
 
-      <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="mt-12 border-t border-zinc-600 dark:border-gray-100  pt-6">
         <div class="text-center sm:flex sm:justify-between sm:text-left">
           <p class="text-sm text-gray-500">
             <span class="block sm:inline">All rights reserved.</span>

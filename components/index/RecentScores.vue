@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div class="flex flex-col p-5 text-sm text-zinc-900 bg-gray-100 rounded border border-gray-300">
+  <div class="flex flex-col p-5 text-sm dark:text-white bg-gray-100 dark:bg-zinc-800  rounded border border-gray-300 dark:border-gray-600">
     <div class="mb-3 text-2xl  bg-green-500 text-white font-bold w-fit p-1 px-2 rounded border-2 border-emerald-900/20">
       <h3>Recent Scores</h3>
     </div>
-    <div v-for="i in 10" :key="i" class="active:bg-emerald-600/30 active:shadow-none border-b border-b-gray-300 p-2 hover:bg-gray-200 hover:shadow-lg transition-all duration-300 shadow-sm ">
+    <div v-for="i in 10" :key="i" class="active:bg-emerald-600/30 active:shadow-none border-b border-b-gray-300 dark:border-b-gray-600 p-2 hover:bg-gray-200 dark:hover:bg-zinc-900 hover:shadow-lg transition-all duration-300 shadow-sm  ">
       <p class="text-lg font-semibold">
         Yesterday
       </p>
