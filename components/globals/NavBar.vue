@@ -107,7 +107,7 @@ const drawerIsOpen = ref(false)
            <div class="flex flex-col space-x-4  items-center relative space-y-5   ">
           <NuxtLink
             v-for="item in items" :key="item.name" :to="item.href" class="text-5xl" active-class="active"
-            @click="updateIndicatorPosition"
+        @click="drawerIsOpen = false"
           >
             {{ item.name }}
           </NuxtLink>

@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="`tournaments/${title}`" class="flex border-b border-b-gray-300 p-2 hover:bg-gray-200 transition-all duration-150 text-gray-500 hover:text-gray-700 space-x-2">
+  <NuxtLink  :to="`tournaments/${title}`" class="flex border-b border-b-gray-300 p-2 hover:bg-gray-200 transition-all duration-150 text-gray-500 hover:text-gray-700 space-x-2">
     <div class="w-1/8  p-1 flex flex-col items-center justify-center">
       <p class="text-sm">
         December
@@ -23,12 +23,10 @@ defineProps({
       </p>
     </div>
     <div class="w-5/6 ">
-      <div class="flex space-x-3">
-        <a class="text-emerald-500 text-lg underline">{{ title }}</a>
-        <!-- <p v-if="registrationOpen" class="rounded-full  px-2  bg-orange-400 text-white text-xs flex items-center justify-center shadow-sm hover:bg-orange-300 hover:shadow-xl transition-all duration-150  ">
-          Registration Open
-        </p> -->
-        <UBadge v-if="registrationOpen" :ui="{ rounded: 'rounded-full' }" class="bg-orange-400 dark:bg-orange-400 shadow-md" size="xs">Registration Open</UBadge>
+      <div class="flex flex-col lg:flex-row lg:space-x-6  ">
+        <span class="text-emerald-500 text-xl underline">{{ title }}</span>
+     
+        <UBadge v-if="registrationOpen" :ui="{ rounded: 'rounded-full' }" class="bg-orange-400 dark:bg-orange-400 shadow-md my-2  !text-white lg:my-0 w-fit" size="xs">Registration Open</UBadge>
       </div>
       <p class="text-sm">
         at {{ location }}
